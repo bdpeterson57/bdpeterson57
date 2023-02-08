@@ -20,19 +20,19 @@
 
     <!-- Residential Slideshow -->
     <section>
-        <img class="resSlides" src="img/residential/resi1.JPG" style="width:80%">
-        <img class="resSlides" src="img/residential/resi2.JPG" style="width:80%">
-        <img class="resSlides" src="img/residential/resi3.JPG" style="width:80%">
-        <img class="resSlides" src="/img/residential/resi4.JPG" style="width:80%">
-        <img class="resSlides" src="/img/residential/resi5.JPG" style="width:80%">
-        <img class="resSlides" src="/img/residential/resi6.JPG" style="width:80%">
-        <img class="resSlides" src="/img/residential/resi7.JPG" style="width:80%">
-        <img class="resSlides" src="/img/residential/resi8.JPG" style="width:80%">
-        <img class="resSlides" src="/img/residential/resi9.JPG" style="width:80%">
-        <img class="resSlides" src="/img/residential/resi10.JPG" style="width:80%">
-        <img class="resSlides" src="/img/residential/resi11.JPG" style="width:80%">
-        <img class="resSlides" src="/img/residential/resi12.JPG" style="width:80%">
-        <img class="resSlides" src="/img/residential/resi13.JPG" style="width:80%">
+        <img class="resiSlides" src="img/residential/resi1.JPG" style="width:80%">
+        <img class="resiSlides" src="img/residential/resi2.JPG" style="width:80%">
+        <img class="resiSlides" src="img/residential/resi3.JPG" style="width:80%">
+        <img class="resiSlides" src="/img/residential/resi4.JPG" style="width:80%">
+        <img class="resiSlides" src="/img/residential/resi5.JPG" style="width:80%">
+        <img class="resiSlides" src="/img/residential/resi6.JPG" style="width:80%">
+        <img class="resiSlides" src="/img/residential/resi7.JPG" style="width:80%">
+        <img class="resiSlides" src="/img/residential/resi8.JPG" style="width:80%">
+        <img class="resiSlides" src="/img/residential/resi9.JPG" style="width:80%">
+        <img class="resiSlides" src="/img/residential/resi10.JPG" style="width:80%">
+        <img class="resiSlides" src="/img/residential/resi11.JPG" style="width:80%">
+        <img class="resiSlides" src="/img/residential/resi12.JPG" style="width:80%">
+        <img class="resiSlides" src="/img/residential/resi13.JPG" style="width:80%">
     </section>
 
     <!-- Commercial Header -->
@@ -49,23 +49,45 @@
 
     <script>
         // Automatic Slideshow - change image every 3 seconds
-        var myIndex = 0;
-        carousel();
+        var resiIndex = 0;
+        resiCarousel();
         
-        function carousel() {
+        function resiCarousel() {
             var i;
-            var x = document.getElementsByClassName("resSlides");
+            var x = document.getElementsByClassName("resiSlides");
             for (i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
             }
-            myIndex++;
-            if (myIndex > x.length) {
-                myIndex = 1
+            resiIndex++;
+            if (resiIndex > x.length) {
+                resiIndex = 1
             }
-            x[myIndex-1].style.display = "block";
-            setTimeout(carousel, 3000);
+            x[resiIndex-1].style.display = "block";
+            setTimeout(resiCarousel, 3000);
         }
     </script>
+
+    <script>
+        // Automatic Slideshow - change image every 3 seconds
+        var commIndex = 0;
+        commCarousel();
+        
+        function commCarousel() {
+            var i;
+            var x = document.getElementsByClassName("commSlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            commIndex++;
+            if (commIndex > x.length) {
+                commIndex = 1
+            }
+            x[commIndex-1].style.display = "block";
+            setTimeout(commCarousel, 3000);
+        }
+    </script>
+
+
 
 <!-- Content will go here -->
 
