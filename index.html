@@ -8,16 +8,99 @@
     <!-- Navigation -->
     <nav class="w3-bar w3-black">
         <a href="index.html" class="w3-button w3-bar-item">Home</a>
-        <a href="photos.html" class="w3-button w3-bar-item">Photos</a>
         <a href="about.html" class="w3-button w3-bar-item">About</a>
         <a href="contact.html" class="w3-button w3-bar-item">Contact</a>
     </nav>
 
-    <!-- Band Description -->
+    <!-- Residential Header -->
     <section class="w3-container w3-center w3-content" style="max-width:600px">
-        <h2 class="w3-wide w3-padding">HERNANDEZ STONEWORK</h2>
-        <p class="w3-opacity"><i>SLOGAN GOES HERE?</i></p>
+        <h2 class="w3-wide">RESIDENTIAL WORK</h2>
     </section>
+
+    <!-- Residential Slideshow -->
+    <section class="w3-display-container w3-center w3-content">
+        <img class="resiSlides" src="img/residential/resi1.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="resiSlides" src="img/residential/resi2.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="resiSlides" src="img/residential/resi3.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="resiSlides" src="img/residential/resi4.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="resiSlides" src="img/residential/resi5.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="resiSlides" src="img/residential/resi6.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="resiSlides" src="img/residential/resi7.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="resiSlides" src="img/residential/resi8.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="resiSlides" src="img/residential/resi9.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="resiSlides" src="img/residential/resi10.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="resiSlides" src="img/residential/resi11.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="resiSlides" src="img/residential/resi12.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="resiSlides" src="img/residential/resi13.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="resiSlides" src="img/residential/resi14.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="resiSlides" src="img/residential/resi15.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+    </section>
+
+    <!-- Commercial Header -->
+    <section class="w3-container w3-center w3-content" style="max-width:600px">
+        <h2 class="w3-wide">COMMERCIAL WORK</h2>
+    </section>
+
+    <!-- Commercial Slideshow -->
+    <section class="w3-display-container w3-center w3-content">
+        <img class="commSlides" src="img/commercial/comm1.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="commSlides" src="img/commercial/comm2.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="commSlides" src="img/commercial/comm3.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="commSlides" src="img/commercial/comm4.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="commSlides" src="img/commercial/comm5.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="commSlides" src="img/commercial/comm6.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="commSlides" src="img/commercial/comm7.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="commSlides" src="img/commercial/comm8.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="commSlides" src="img/commercial/comm9.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="commSlides" src="img/commercial/comm10.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="commSlides" src="img/commercial/comm11.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="commSlides" src="img/commercial/comm12.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="commSlides" src="img/commercial/comm13.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="commSlides" src="img/commercial/comm14.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+        <img class="commSlides" src="img/commercial/comm15.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
+    </section>
+
+    <script>
+        // Automatic Slideshow - change image every 3 seconds
+        var resiIndex = 0;
+        resiCarousel();
+        
+        function resiCarousel() {
+            var i;
+            var x = document.getElementsByClassName("resiSlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            resiIndex++;
+            if (resiIndex > x.length) {
+                resiIndex = 1
+            }
+            x[resiIndex-1].style.display = "block";
+            setTimeout(resiCarousel, 3000);
+        }
+    </script>
+
+    <script>
+        // Automatic Slideshow - change image every 3 seconds
+        var commIndex = 0;
+        commCarousel();
+        
+        function commCarousel() {
+            var i;
+            var x = document.getElementsByClassName("commSlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            commIndex++;
+            if (commIndex > x.length) {
+                commIndex = 1
+            }
+            x[commIndex-1].style.display = "block";
+            setTimeout(commCarousel, 3000);
+        }
+    </script>
+
+
 
 <!-- Content will go here -->
 
