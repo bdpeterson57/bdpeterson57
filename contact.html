@@ -18,32 +18,40 @@
         <p class="w3-opacity"><i>Contact Page</i></p>
     </section>
 
-    <!-- Sidebar Contact Info -->
+    <!-- User Contact Form -->
     <div class="w3-container w3-light-gray w3-border-black w3-cell">
         <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact_form.php">
-            <label for="Name" class="fcf-label">Your name</label>
-            <div class="fcf-input-group">
-                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+            <div class="fcf-form-group">
+                <label for="Name" class="fcf-label">Your name</label>
+                <div class="fcf-input-group">
+                    <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                </div>
             </div>
-        <div class="fcf-form-group">
-            <label for="Email" class="fcf-label">Your email address</label>
-            <div class="fcf-input-group">
-                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+            <div class="fcf-form-group">
+                <label for="Email" class="fcf-label">Your email address</label>
+                <div class="fcf-input-group">
+                    <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                </div>
             </div>
-            <label for="Phone" class="fcf-label">Your phone number</label>
-            <div class="fcf-input-group">
-                <input id="Phone" name="Phone" class="fcf-form-control" maxlength="10" required>
+            <div class="fcf-form-group">
+                <label for="Phone" class="fcf-label">Your phone number</label>
+                <div class="fcf-input-group">
+                    <input id="Phone" name="Phone" class="fcf-form-control" maxlength="10" required>
+                </div>
             </div>
-            <label for="Message" class="fcf-label">Your message</label>
-            <div class="fcf-input-group">
-                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+            <div class="fcf-form-group">
+                <label for="Message" class="fcf-label">Your message</label>
+                <div class="fcf-input-group">
+                    <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                </div>
             </div>
-        </div>
-        <div class="fcf-form-group">
-            <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send</button>
-        </div>
+            <div class="fcf-form-group">
+                <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send</button>
+            </div>
+        </form>
     </div>
     
+    <!-- Sidebar Contact Info -->
     <div class="w3-sidebar w3-bar-block w3-light-gray w3-padding-large w3-border w3-border-black" style="width:25%;right:5%">
         <h5>Email</h5>
         <p>stoness2000@gmail.com</p>

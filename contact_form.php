@@ -1,8 +1,7 @@
 <?php
 if (isset($_POST['Email'])) {
 
-    // EDIT THE FOLLOWING TWO LINES:
-    $email_to = "bdpeterson57@gmail.com"; //stoness2000@gmail.dom
+    $email_to = "bdpeterson57@gmail.com"; //stoness2000@gmail.com
     $email_subject = "New Contact Form";
 
     function problem($error)
@@ -59,9 +58,7 @@ if (isset($_POST['Email'])) {
     $email_message .= "Message: " . clean_string($message) . "\n";
 
     // create email headers
-    $headers = 'From: ' . $email . "\r\n" .
-        'Reply-To: ' . $email . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
+    $headers = 'From: ' . $email . "\r\n" . 'Reply-To: ' . $email . "\r\n" . 'X-Mailer: PHP/' . phpversion();
     @mail($email_to, $email_subject, $email_message, $headers);
 ?>
 
