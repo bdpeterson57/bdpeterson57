@@ -23,6 +23,15 @@
 
         <!-- User Contact Form -->
         <section class="w3-container w3-light-gray w3-border w3-border-black" style="margin-bottom: 5%;">
+            <script src="assets/js/jquery.min.js"></script>
+            <script type="text/javascript">var submitted=false;</script>
+            <script type="text/javascript">
+                $('#gform').on('submit', function(e) {
+                    $('#gform *').fadeOut(2000);
+                    $('#gform').prepend('We received your message, and we\'ll get back to your shortly!');
+                });
+            </script>
+            
             <form name="gform" id="gform" enctype="text/plain" onsubmit="submissionMessage()" action="https://docs.google.com/forms/d/e/1FAIpQLSfI9EWr-QHalkHstrbqoXisdAcumpNr0LOsOlavQNa6RzcAgw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
                 <br>First and Last Name:<br>
                 <input class="w3-input" type="text" name="entry.1205020376" id="entry.1205020376" required><br><br>
@@ -37,20 +46,13 @@
             
             <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
-            <script>
+            <!-- <script>
                 function submissionMessage(){
                     $('#gform *').fadeOut(2000);
                     $('#gform').prepend('We received your message, and we\'ll get back to your shortly!');
                 }
-            </script>
-            <!-- <script src="assets/js/jquery.min.js"></script>
-            <script type="text/javascript">var submitted=false;</script>
-            <script type="text/javascript">
-                $('#gform').on('submit', function(e) {
-                    $('#gform *').fadeOut(2000);
-                    $('#gform').prepend('We received your message, and we\'ll get back to your shortly!');
-                });
             </script> -->
+            
         </section>
     </div>
 
