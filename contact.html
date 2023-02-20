@@ -37,6 +37,9 @@
                     form.fadeOut(2000);
                     form.prepend('We received your message, and we\'ll get back to your shortly!');
                 }
+                function resetForm(){
+                    document.getElementById("gform").reset();
+                }
             </script>
 
             <form name="gform" id="gform" enctype="text/plain" onsubmit="submissionMessage(this.form)" action="https://docs.google.com/forms/d/e/1FAIpQLSfI9EWr-QHalkHstrbqoXisdAcumpNr0LOsOlavQNa6RzcAgw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
@@ -49,6 +52,7 @@
                 Message:<br>
                 <textarea class="w3-input" type="text" name="entry.2020632956" id="entry.2020632956" rows="6" maxlength="3000" required></textarea><br><br>
                 <input class="w3-btn" type="submit" value="Submit" style="margin-bottom: 2%;"><br>
+                <input class="w3-btn" onclick="resetForm()" value="Clear"><br>
             </form>
             
             <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
