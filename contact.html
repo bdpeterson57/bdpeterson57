@@ -33,13 +33,13 @@
             </script> -->
 
             <script>
-                function submissionMessage(){
-                    document.getElementById("gform").fadeOut(2000);
-                    document.getElementById("gform").prepend('We received your message, and we\'ll get back to your shortly!');
+                function submissionMessage(form){
+                    form.fadeOut(2000);
+                    form.prepend('We received your message, and we\'ll get back to your shortly!');
                 }
             </script>
 
-            <form name="gform" id="gform" enctype="text/plain" onsubmit="submissionMessage()" action="https://docs.google.com/forms/d/e/1FAIpQLSfI9EWr-QHalkHstrbqoXisdAcumpNr0LOsOlavQNa6RzcAgw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+            <form name="gform" id="gform" enctype="text/plain" onsubmit="submissionMessage(this.form)" action="https://docs.google.com/forms/d/e/1FAIpQLSfI9EWr-QHalkHstrbqoXisdAcumpNr0LOsOlavQNa6RzcAgw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
                 <br>First and Last Name:<br>
                 <input class="w3-input" type="text" name="entry.1205020376" id="entry.1205020376" required><br><br>
                 Email Address:<br>
