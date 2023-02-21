@@ -38,9 +38,9 @@
         <img class="resiSlides" src="img/residential/resi13.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
         <img class="resiSlides" src="img/residential/resi14.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
         <img class="resiSlides" src="img/residential/resi15.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
-        
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+
+        <button class="w3-button w3-black w3-display-left" onclick="plusCommDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusCommDivs(1)">&#10095;</button>
     </section>
 
     <!-- Commercial Header -->
@@ -66,27 +66,45 @@
         <img class="commSlides" src="img/commercial/comm14.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
         <img class="commSlides" src="img/commercial/comm15.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
 
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        <button class="w3-button w3-black w3-display-left" onclick="plusResiDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusResiDivs(1)">&#10095;</button>
     </section>
 
     <script>
-        // Automatic Slideshow - change image every 3 seconds
-        var resiIndex = 0;
-        resiCarousel();
-        
-        function resiCarousel() {
+        var resiIndex = 1;
+        var commIndex = 1;
+
+        showResiDivs(resiIndex);
+        showCommDivs(commIndex);
+
+        function plusResiDivs(n) {
+            showResiDivs(resiIndex += n);
+        }
+
+        function plusCommDivs(n) {
+            showCommDivs(commIndex += n);
+        }
+
+        function showResiDivs(n) {
             var i;
-            var x = document.getElementsByClassName("resiSlides");
+            var x = document.getElementsByClassName("resiSldes");
+            if (n > x.length) {resiIndex = 1}
+            if (n < 1) {resiIndex = x.length}
             for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
+                x[i].style.display = "none";  
             }
-            resiIndex++;
-            if (resiIndex > x.length) {
-                resiIndex = 1
+            x[resiIndex-1].style.display = "block";  
+        }
+
+        function showCommDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("commSldes");
+            if (n > x.length) {commIndex = 1}
+            if (n < 1) {commIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
             }
-            x[resiIndex-1].style.display = "block";
-            setTimeout(resiCarousel, 3000);
+            x[commIndex-1].style.display = "block";  
         }
     </script>
 
