@@ -28,7 +28,7 @@
     </section>
 
     <!-- Residential Slideshow -->
-    <div class="w3-display-container w3-center w3-content w3-gray" style="width:100%; margin-bottom: 5%;">
+    <div class="w3-display-container w3-center w3-content w3-gray" style="width:100%; margin-bottom: 5%; max-height: 300px;">
         <img class="resiSlides" src="img/residential/resi1.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto; cursor: zoom-in;" onclick="document.getElementById('modalResi1').style.display='block'">
         <div id="modalResi1" class="w3-modal" onclick="this.style.display='none'">
             <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
@@ -299,6 +299,8 @@
         showResiDivs(resiIndex);
         showCommDivs(commIndex);
 
+        commCarousel();
+
         function plusResiDivs(n) {
             showResiDivs(resiIndex += n);
         }
@@ -343,6 +345,24 @@
             }
             x[commIndex-1].style.display = "block";  
             dots[commIndex-1].className += " w3-white";
+        }
+        
+        function commCarousel() {
+            var i;
+            var x = document.getElementsByClassName("commSlides");
+            var dots = document.getElementsByClassName("commDemo");
+
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            commIndex++;
+            if (commIndex > x.length) {
+                commIndex = 1
+            }
+            x[commIndex-1].style.display = "block";
+            dots[commIndex-1].className += " w3-white";
+
+            setTimeout(commCarousel, 3000);
         }
     </script>
 
