@@ -174,7 +174,7 @@
             </div>
         </div>
         <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-            <span class="w3-badge commDemo w3-border w3-transparent w3-hover-white" onclick="currentCommDiv(1)"></span>
+            <span class="commDemo w3-badge w3-border w3-transparent w3-hover-white" onclick="currentCommDiv(1)"></span>
             <span class="w3-badge commDemo w3-border w3-transparent w3-hover-white" onclick="currentCommDiv(2)"></span>
             <span class="w3-badge commDemo w3-border w3-transparent w3-hover-white" onclick="currentCommDiv(3)"></span>
             <span class="w3-badge commDemo w3-border w3-transparent w3-hover-white" onclick="currentCommDiv(4)"></span>
@@ -229,7 +229,6 @@
             var i;
             var x = document.getElementsByClassName("commSlides");
             var dots = document.getElementsByClassName("commDemo");
-
             if (n > x.length) {commIndex = 1}
             if (n < 1) {commIndex = x.length}
             for (i = 0; i < x.length; i++) {
@@ -238,7 +237,7 @@
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" w3-white", "");
             }
-            x[commIndex-1].style.display = "block";
+            x[commIndex-1].style.display = "block";  
             dots[commIndex-1].className += " w3-white";
         }
     </script>
