@@ -299,7 +299,7 @@
         showResiDivs(resiIndex);
         showCommDivs(commIndex);
 
-        commCarousel();
+        setTimeout(commCarousel(), 3000);
 
         function plusResiDivs(n) {
             showResiDivs(resiIndex += n);
@@ -345,6 +345,8 @@
             }
             x[commIndex-1].style.display = "block";  
             dots[commIndex-1].className += " w3-white";
+
+            setTimeout(commCarousel, 3000);
         }
         
         function commCarousel() {
@@ -358,7 +360,7 @@
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" w3-white", "");
             }
-            
+
             commIndex++;
             if (commIndex > x.length) {
                 commIndex = 1
