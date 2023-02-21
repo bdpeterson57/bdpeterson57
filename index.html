@@ -45,8 +45,8 @@
         <img class="resiSlides" src="img/residential/resi14.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
         <img class="resiSlides" src="img/residential/resi15.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
 
-        <button class="w3-button w3-black w3-display-left" onclick="plusCommDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusCommDivs(1)">&#10095;</button>
+        <button class="w3-button w3-black w3-display-left" onclick="plusResiDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusResiDivs(1)">&#10095;</button>
     </section>
 
     <!-- Commercial Header -->
@@ -72,8 +72,8 @@
         <img class="commSlides" src="img/commercial/comm14.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
         <img class="commSlides" src="img/commercial/comm15.jpg" style="max-height:600px; display:block; margin-left:auto; margin-right: auto">
 
-        <button class="w3-button w3-black w3-display-left" onclick="plusResiDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusResiDivs(1)">&#10095;</button>
+        <button class="w3-button w3-black w3-display-left" onclick="plusCommDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusCommDivs(1)">&#10095;</button>
     </section>
 
     <script>
@@ -86,7 +86,6 @@
         function plusResiDivs(n) {
             showResiDivs(resiIndex += n);
         }
-
         function plusCommDivs(n) {
             showCommDivs(commIndex += n);
         }
@@ -101,7 +100,6 @@
             }
             x[resiIndex-1].style.display = "block";  
         }
-
         function showCommDivs(n) {
             var i;
             var x = document.getElementsByClassName("commSldes");
@@ -114,7 +112,7 @@
         }
     </script>
 
-    <script>
+    <!-- <script>
         // Automatic Slideshow - change image every 3 seconds
         var commIndex = 0;
         commCarousel();
@@ -132,7 +130,7 @@
             x[commIndex-1].style.display = "block";
             setTimeout(commCarousel, 3000);
         }
-    </script>
+    </script> -->
 
     <!-- Footer Contact Info -->
     <footer class="w3-container w3-light-gray w3-centered w3-padding-large" style="bottom:0; position: fixed; width: 100%;">
