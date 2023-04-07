@@ -27,7 +27,36 @@
 
         <!-- User Contact Form -->
         <section class="w3-container w3-light-gray w3-border w3-border-black" style="margin-bottom: 5%;">
-            <script>
+            <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact_form.php">
+                <div class="fcf-form-group">
+                    <label for="Name" class="fcf-label">Your name</label>
+                    <div class="fcf-input-group">
+                        <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                    </div>
+                </div>
+                <div class="fcf-form-group">
+                    <label for="Email" class="fcf-label">Your email address</label>
+                    <div class="fcf-input-group">
+                        <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                    </div>
+                </div>
+                <div class="fcf-form-group">
+                    <label for="Phone" class="fcf-label">Your phone number</label>
+                    <div class="fcf-input-group">
+                        <input id="Phone" name="Phone" class="fcf-form-control" maxlength="10" required>
+                    </div>
+                </div>
+                <div class="fcf-form-group">
+                    <label for="Message" class="fcf-label">Your message</label>
+                    <div class="fcf-input-group">
+                        <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                    </div>
+                </div>
+                <div class="fcf-form-group">
+                    <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send</button>
+                </div>
+            </form>
+            <!-- <script>
                 function submissionMessage(){
                     document.getElementById("gform").reset();
                     alert("We received your message, and we'll get back to you shortly!");
@@ -50,7 +79,7 @@
                 <input class="w3-btn w3-gray w3-round-large w3-left" type="button" onclick="resetForm()" value="Clear" style="margin-bottom: 2%;">
             </form>
             
-            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe> -->
         </section>
     </div>
 
